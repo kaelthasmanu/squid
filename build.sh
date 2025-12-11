@@ -52,12 +52,14 @@ apt-get -y install \
     libecap3-dev \
     libdbi-perl \
     libdb-dev \
-    pkg-config
+    pkg-config \
+    git \
+    nodejs
 
 CI_BUILD_ROOT=${PWD}
 
 # drop squid build folder
-rm -R build/squid
+rm -rf build/squid
 
 # we will be working in a subfolder make it
 mkdir -p build/squid
